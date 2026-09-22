@@ -12,3 +12,41 @@ engine = create_engine(
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
+
+'''
+engine
+=
+How do we reach the database?
+
+
+Base
+=
+Foundation that lets SQLAlchemy recognize
+our model classes as database table definitions
+
+
+Base.metadata
+=
+Collection of those table definitions
+
+
+Base.metadata.create_all(bind=engine)
+=
+Create those tables in the database
+
+
+SessionLocal
+=
+Factory for creating database sessions
+
+
+SessionLocal()
+=
+One actual working session
+
+
+get_db()
+=
+Usually creates and cleans up one session
+for a request
+'''
